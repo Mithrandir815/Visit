@@ -1,6 +1,7 @@
 package com.example.visit.ui.recruitment.compose.atoms
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -29,13 +30,15 @@ import com.example.visit.ui.theme.SecondaryColor
 @Composable
 fun RecruitmentContent(
     modifier: Modifier = Modifier,
-    recruitment: Recruitment
+    recruitment: Recruitment,
+    onClick: (Int) -> Unit,
 ) {
     Row(
         modifier = modifier
             .fillMaxWidth()
             .height(60.dp)
             .background(color = SecondaryColor, shape = RoundedCornerShape(8.dp))
+            .clickable(onClick = { onClick(recruitment.id) })
     ) {
         AsyncImage(
             model = ImageRequest.Builder(context = LocalContext.current)
@@ -71,9 +74,10 @@ fun RecruitmentContent(
 @Composable
 fun PreviewRecruitmentContent() {
     val recruitment = Recruitment(
+        id = 1,
         title = "Androidエンジニア",
         companyName = "Hoge株式会社",
-        companyImage = "aaaa"
+        companyImage = "aaaa",
     )
-    RecruitmentContent(modifier = Modifier.background(color = Color.White), recruitment)
+    RecruitmentContent(modifier = Modifier.background(color = Color.White), recruitment, {})
 }

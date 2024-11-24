@@ -21,10 +21,10 @@ fun RecruitmentContentList(
     LazyColumn(
         modifier
             .fillMaxWidth()
-            .padding(horizontal = 4.dp)
+            .padding(all = 4.dp)
     ) {
         items(items = recruitments) { recruitment ->
-            RecruitmentContent(Modifier, recruitment)
+            RecruitmentContent(Modifier.padding(bottom = 4.dp), recruitment)
         }
     }
 }

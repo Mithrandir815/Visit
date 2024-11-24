@@ -3,9 +3,11 @@ package com.example.visit.ui.recruitment.atoms
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -22,6 +24,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.visit.R
 import com.example.visit.data.Recruitment
+import com.example.visit.ui.theme.SecondaryColor
 
 @Composable
 fun RecruitmentContent(
@@ -29,7 +32,10 @@ fun RecruitmentContent(
     recruitment: Recruitment
 ) {
     Row(
-        modifier = modifier.height(40.dp)
+        modifier = modifier
+            .fillMaxWidth()
+            .height(60.dp)
+            .background(color = SecondaryColor, shape = RoundedCornerShape(8.dp))
     ) {
         AsyncImage(
             model = ImageRequest.Builder(context = LocalContext.current)
@@ -40,11 +46,11 @@ fun RecruitmentContent(
             placeholder = painterResource(R.drawable.ic_launcher_foreground),
             contentDescription = stringResource(R.string.recruitment_list),
             contentScale = ContentScale.Crop,
-            modifier = Modifier.width(60.dp)
+            modifier = Modifier.width(80.dp)
         )
         Column {
             Text(
-                modifier = Modifier.padding(start = 4.dp, end = 4.dp, top = 4.dp),
+                modifier = Modifier.padding(start = 8.dp, end = 8.dp, top = 4.dp),
                 text = recruitment.title,
                 fontSize = 12.sp,
                 overflow = TextOverflow.Ellipsis,
@@ -52,8 +58,8 @@ fun RecruitmentContent(
             )
             Text(
                 text = recruitment.companyName,
-                modifier = Modifier.padding(start = 4.dp, end = 4.dp, bottom = 4.dp),
-                fontSize = 8.sp,
+                modifier = Modifier.padding(start = 8.dp, end = 8.dp, bottom = 4.dp),
+                fontSize = 10.sp,
                 overflow = TextOverflow.Ellipsis,
                 maxLines = 1
             )

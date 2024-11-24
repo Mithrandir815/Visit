@@ -1,4 +1,4 @@
-package com.example.visit.ui.recruitment.organism
+package com.example.visit.ui.recruitment.compose.atoms.organism
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.visit.data.Recruitment
-import com.example.visit.ui.recruitment.atoms.RecruitmentContent
+import com.example.visit.ui.recruitment.compose.atoms.RecruitmentContent
 
 @Composable
 fun RecruitmentContentList(

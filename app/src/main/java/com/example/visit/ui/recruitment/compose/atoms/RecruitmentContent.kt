@@ -1,4 +1,4 @@
-package com.example.visit.ui.recruitment.atoms
+package com.example.visit.ui.recruitment.compose.atoms
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column

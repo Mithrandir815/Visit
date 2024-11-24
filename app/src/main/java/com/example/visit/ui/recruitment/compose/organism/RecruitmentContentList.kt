@@ -1,4 +1,4 @@
-package com.example.visit.ui.recruitment.compose.atoms.organism
+package com.example.visit.ui.recruitment.compose.organism
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -57,20 +57,26 @@ fun PreviewRecruitmentContent() {
         Recruitment(
             id = 1,
             title = "長いタイトル長いタイトル長いタイトル長いタイトル長いタイトル長いタイトル",
-            companyName = "Hoge株式会社",
-            companyImage = "aaaa"
+            company = Recruitment.Company(
+                name = "Hoge株式会社",
+                image = "aaaa",
+            )
         ),
         Recruitment(
             id = 2,
             title = "Androidエンジニア",
-            companyName = "Hoge株式会社",
-            companyImage = "aaaa"
+            company = Recruitment.Company(
+                name = "Hoge株式会社",
+                image = "aaaa",
+            )
         ),
         Recruitment(
             id = 3,
             title = "Androidエンジニア",
-            companyName = "Hoge株式会社",
-            companyImage = "aaaa"
+            company = Recruitment.Company(
+                name = "Hoge株式会社",
+                image = "aaaa",
+            )
         ),
     )
     RecruitmentContentList(modifier = Modifier.background(color = Color.White), recruitments, {})

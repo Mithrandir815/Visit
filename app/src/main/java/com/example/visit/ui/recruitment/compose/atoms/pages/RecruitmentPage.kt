@@ -1,4 +1,4 @@
-package com.example.visit.ui.recruitment.pages
+package com.example.visit.ui.recruitment.compose.atoms.pages
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.visit.R
 import com.example.visit.data.Recruitment
-import com.example.visit.ui.recruitment.organism.RecruitmentContentList
+import com.example.visit.ui.recruitment.compose.atoms.organism.RecruitmentContentList
 import com.example.visit.ui.theme.PrimaryColor
 
 @Composable
